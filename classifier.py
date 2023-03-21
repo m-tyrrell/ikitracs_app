@@ -1,9 +1,3 @@
-import pandas as pd
-import numpy as np
-import os
-import random
-
-
 import torch
 import streamlit as st
 from transformers import BertTokenizer
