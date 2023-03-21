@@ -9,8 +9,13 @@ st.markdown('NDC Economy Wide')
 
 from transformers import AutoTokenizer, AutoModelForSequenceClassification
 
-tokenizer = AutoTokenizer.from_pretrained("mtyrrell/ikitracs_economywide")
-model = AutoModelForSequenceClassification.from_pretrained("mtyrrell/ikitracs_economywide")
+# tokenizer = AutoTokenizer.from_pretrained("mtyrrell/ikitracs_economywide")
+# model = AutoModelForSequenceClassification.from_pretrained("mtyrrell/ikitracs_economywide")
+
+
+
+tokenizer = AutoTokenizer.from_pretrained("mgreenbe/bertlet-base-uncased-for-sequence-classification")
+model = AutoModelForSequenceClassification.from_pretrained("mgreenbe/bertlet-base-uncased-for-sequence-classification")
 
 text = st.text_area('Text Input')
 
