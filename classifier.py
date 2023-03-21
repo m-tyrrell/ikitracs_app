@@ -16,10 +16,11 @@ text = st.text_area('Text Input')
 
 
 def run_model(input_text):
-    device = torch.device('cuda' if torch.cuda.is_available() else 'cpu')
+    # device = torch.device('cuda' if torch.cuda.is_available() else 'cpu')
     input_text = str(input_text)
     input_text = ' '.join(input_text.split())
-    input_tokenized = tokenizer.encode(input_text, return_tensors='pt').to(device)
+    # input_tokenized = tokenizer.encode(input_text, return_tensors='pt').to(device)
+    input_tokenized = tokenizer.encode(input_text, return_tensors='pt')
     pred = model(input_tokenized)                                          
     pred_int = np.argmax(pred['logits'].detach().cpu().numpy())
     output = ['NEGATIVE' if pred_int == 0 else 'ECONOMY-WIDE']
