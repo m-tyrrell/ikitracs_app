@@ -13,6 +13,8 @@ from transformers import AutoTokenizer, AutoModelForSequenceClassification
 tokenizer = AutoTokenizer.from_pretrained("mtyrrell/ikitracs_economywide")
 model = AutoModelForSequenceClassification.from_pretrained("mtyrrell/ikitracs_economywide")
 
+#test
+
 
 
 # tokenizer = AutoTokenizer.from_pretrained("mgreenbe/bertlet-base-uncased-for-sequence-classification")
